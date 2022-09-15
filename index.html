@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Canteen Management</title>
+</head>
+
+<body class="bg-black">
+
+    <h1 class="text-4xl font-semibold text-center px-2 py-5 text-white">Centeen Management</h1>
+
+    <div class="total-details text-pink-500 font-bold flex justify-center space-x-6 py-10 px-8">
+        <p class="totalVeg">Total Veg Meal: <span class="text-white" id="total-veg">0</span></p>
+        <p class="totalVeg">Total Non-Veg Meal: <span class="text-white" id="total-nonveg">0</span></p>
+        <p class="totalVeg">Total Price: <span class="text-white">Rs. <span id="total-price">0.00</span></span></p>
+    </div>
+
+    <!-- ..........Buttons to add the meal...............  -->
+
+    <div class="btns flex justify-evenly px-1 space-x-1">
+        <button class="veg px-5 w-[40vw] py-2 bg-green-700 text-white rounded" id="veg-btn" onclick="AddData(this.id)"
+            onload="show(this.id)">Veg Meal</button>
+        <button class="non-veg px-5 py-2 bg-red-700 text-white rounded w-[40vw]" id="non-btn" onclick="AddData(this.id)"
+            onload="show(this.id)">Non-Veg Meal</button>
+    </div>
+
+    <!-- ................................Table................... ................. -->
+    <div class="flex flex-col items-center rounded pb-10">
+        <div class="HeadingTable pt-12 rounded ">
+            <div class="grid grid-cols-2 grid-flow-col border-gray-900 border-b-8">
+                <h1
+                    class="text-center font-bold text-lg border py-2 px-1 border-gray-400 bg-gray-600 text-white w-[47vw]">
+                    Veg Meal Count: </h1>
+                <h1
+                    class="text-center font-bold text-lg border py-2 px-1 border-gray-400 bg-gray-600 text-white w-[47vw]">
+                    Non-Veg Meal Count: </h1>
+            </div>
+        </div>
+        <div class="HeadingTable rounded ">
+            <div class="grid grid-cols-2 grid-flow-col ">
+                <h1 class="text-center font-bold text-lg border py-2 px-1 border-gray-400 bg-gray-600 text-white w-[47vw]"
+                    id="veg">
+                    NA</h1>
+                <h1 class="text-center font-bold text-lg border py-2 px-1 border-gray-400 bg-gray-600 text-white w-[47vw]"
+                    id="non-veg">
+                    NA</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="image flex justify-center">
+        <img src="/images/thali.png" alt="" class="md:h-[300px]">
+    </div>
+
+    <!-- ........................Reset Button...................  -->
+    <div class="reset py-5 flex justify-center">
+        <button class="px-2 py-1 bg-white text-black rounded w-[40vw]" id="reset-btn" onclick="resetData()">Reset Everything</button>
+    </div>
+
+    <script src="/index.js" type="module"></script>
+</body>
+
+</html>
