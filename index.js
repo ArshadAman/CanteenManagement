@@ -79,7 +79,9 @@ function resetData(){
     total();
   }
   else{
+    alert("Hello welcome to my website");
     alert("Your data is SAFE");
+    
   }
 }
 
